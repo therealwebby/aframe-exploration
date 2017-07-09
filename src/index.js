@@ -4,7 +4,11 @@ import { Provider } from 'react-redux';
 import App from './components/App';
 import configureStore from './configure-store';
 
-const store = configureStore({});
+const store = configureStore({
+  vrProperties: {
+    isInVRMode: false
+  }
+});
 
 render(
   <Provider store={store}>
