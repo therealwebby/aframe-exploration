@@ -10,6 +10,7 @@ import Sphere from './Sphere';
 import Sun from './Sun';
 import PointLight from './PointLight';
 import Plane from './Plane';
+import Camera from './Camera';
 
 import * as vrPropertyActions from '../actions/vr-properties';
 
@@ -26,6 +27,7 @@ class App extends Component {
         <Entity primitive="a-sky" color="#ECECEC" />
         <Sun />
         <PointLight />
+        <Camera />
       </Scene>
     );
   }

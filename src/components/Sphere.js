@@ -5,8 +5,8 @@ const Sphere = () =>
   (
     <Entity
       geometry={{ primitive: 'sphere' }}
-      position={{ x: 0, y: 2, z: -5 }}
-      radius="1"
+      position={{ x: 0, y: 1.25, z: -7.5 }}
+      radius="0.5"
       material={{
         color: '#3498db',
         opacity: 1,
