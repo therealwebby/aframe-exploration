@@ -7,8 +7,7 @@ const Sun = () =>
       light={{
         type: 'ambient',
         color: '#fffae8',
-        intensity: '0.7',
-        castShadow: true
+        intensity: '0.7'
       }}
     />
   );

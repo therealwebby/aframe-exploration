@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 import Sphere from './Sphere';
 import Sun from './Sun';
 import PointLight from './PointLight';
+import Plane from './Plane';
 
 import * as vrPropertyActions from '../actions/vr-properties';
 
@@ -21,18 +22,7 @@ class App extends Component {
     return (
       <Scene>
         <Sphere />
-        <Entity
-          primitive="a-plane"
-          position="0 0 -4"
-          rotation="-90 0 0"
-          width="4"
-          height="4"
-          color="#7BC8A4"
-          shadow={{
-            cast: true,
-            receive: true
-          }}
-        />
+        <Plane />
         <Entity primitive="a-sky" color="#ECECEC" />
         <Sun />
         <PointLight />
