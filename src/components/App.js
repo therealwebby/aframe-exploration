@@ -7,6 +7,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import Sphere from './Sphere';
+import Sun from './Sun';
+import PointLight from './PointLight';
 
 import * as vrPropertyActions from '../actions/vr-properties';
 
@@ -26,8 +28,14 @@ class App extends Component {
           width="4"
           height="4"
           color="#7BC8A4"
+          shadow={{
+            cast: true,
+            receive: true
+          }}
         />
         <Entity primitive="a-sky" color="#ECECEC" />
+        <Sun />
+        <PointLight />
       </Scene>
     );
   }

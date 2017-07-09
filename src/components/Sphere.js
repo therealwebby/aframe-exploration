@@ -9,10 +9,14 @@ const Sphere = () =>
       radius="1"
       material={{
         color: '#e0e0e0',
-        opacity: 0.8,
+        opacity: 1,
         transparent: true,
         metalness: 0.1,
         roughness: 0.7
+      }}
+      shadow={{
+        cast: true,
+        receive: true
       }}
     />
   );
