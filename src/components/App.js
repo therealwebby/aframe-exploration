@@ -1,5 +1,5 @@
 import 'aframe';
-import { Entity, Scene } from 'aframe-react';
+import { Scene } from 'aframe-react';
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -11,6 +11,8 @@ import Sun from './Sun';
 import PointLight from './PointLight';
 import Plane from './Plane';
 import Camera from './Camera';
+import VideoPlayer from './VideoPlayer';
+import Assets from './Assets';
 
 import * as vrPropertyActions from '../actions/vr-properties';
 
@@ -21,13 +23,31 @@ class App extends Component {
 
   render() {
     return (
-      <Scene>
+      <Scene
+        fog={{
+          type: 'exponential',
+          color: '#AAA',
+          density: '0.03'
+        }}
+      >
+        <a-assets>
+          <video
+            id="big-buck-bunny"
+            autoPlay
+            loop="true"
+            src="assets/video/big_buck_bunny.mp4"
+          >
+            <track kind="captions" />
+          </video>
+        </a-assets>
+
+        <Assets />
         <Sphere />
         <Plane />
-        <Entity primitive="a-sky" color="#ECECEC" />
         <Sun />
         <PointLight />
         <Camera />
+        <VideoPlayer />
       </Scene>
     );
   }

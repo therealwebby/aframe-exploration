@@ -12,8 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "aframe": "^0.6.0",
+    "aframe-animation-component": "^3.2.5",
     "aframe-react": "^4.2.4",
     "babel-preset-react": "^6.24.1",
+    "file-loader": "^0.11.2",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

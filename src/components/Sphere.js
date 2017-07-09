@@ -8,7 +8,7 @@ const Sphere = () =>
       position={{ x: 0, y: 1.25, z: -7.5 }}
       radius="0.5"
       material={{
-        color: '#3498db',
+        color: '#1abc9c',
         opacity: 1,
         transparent: true,
         metalness: 0.1,

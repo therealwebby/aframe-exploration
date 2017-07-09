@@ -19,6 +19,11 @@ module.exports = {
         test: /\.js$/,
         loaders: ['babel-loader'],
         include: path.join(__dirname, 'src')
+      },
+      {
+        test: /\.(jpe?g|gif|png|svg|woff|ttf|mp4|mp3)$/,
+        loaders: ['file-loader'],
+        include: path.join(__dirname, 'src')
       }
     ]
   },
