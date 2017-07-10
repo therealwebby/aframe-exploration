@@ -7,6 +7,9 @@ import configureStore from './configure-store';
 const store = configureStore({
   vrProperties: {
     isInVRMode: false
+  },
+  video: {
+    isPlaying: false
   }
 });
 

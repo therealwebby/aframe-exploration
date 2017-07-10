@@ -12,9 +12,10 @@ import PointLight from './PointLight';
 import Plane from './Plane';
 import Camera from './Camera';
 import VideoPlayer from './VideoPlayer';
-import Assets from './Assets';
+import Sky from './Sky';
 
 import * as vrPropertyActions from '../actions/vr-properties';
+import * as videoActions from '../actions/video';
 
 class App extends Component {
   componentDidMount() {
@@ -23,13 +24,7 @@ class App extends Component {
 
   render() {
     return (
-      <Scene
-        fog={{
-          type: 'exponential',
-          color: '#AAA',
-          density: '0.03'
-        }}
-      >
+      <Scene>
         <a-assets>
           <video
             id="big-buck-bunny"
@@ -41,20 +36,28 @@ class App extends Component {
           </video>
         </a-assets>
 
-        <Assets />
         <Sphere />
         <Plane />
         <Sun />
         <PointLight />
         <Camera />
-        <VideoPlayer />
+        <VideoPlayer
+          isPlaying={this.props.video.isPlaying}
+          videoId="big-buck-bunny"
+          playVideo={this.props.playVideo}
+        />
+        <Sky />
       </Scene>
     );
   }
 }
 
 App.propTypes = {
-  disableVR: PropTypes.func.isRequired
+  disableVR: PropTypes.func.isRequired,
+  video: PropTypes.shape({
+    isPlaying: PropTypes.bool.isRequired
+  }).isRequired,
+  playVideo: PropTypes.func.isRequired
 };
 
 /**
@@ -63,10 +66,14 @@ App.propTypes = {
  * @returns {{vrProperties: Object}}
  */
 function mapStateToProps(state) {
-  const { vrProperties } = state;
+  const {
+    vrProperties,
+    video
+  } = state;
 
   return {
-    vrProperties
+    vrProperties,
+    video
   };
 }
 
@@ -78,7 +85,8 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(Object.assign(
     {},
-    vrPropertyActions
+    vrPropertyActions,
+    videoActions
   ), dispatch);
 }
 

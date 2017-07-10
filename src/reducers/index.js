@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import vrProperties from './vr-properties';
+import video from './video';
 
 const rootReducer = combineReducers({
-  vrProperties
+  vrProperties,
+  video
 });
 
 export default rootReducer;
