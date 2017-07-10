@@ -17,6 +17,8 @@ import Sky from './Sky';
 import * as vrPropertyActions from '../actions/vr-properties';
 import * as videoActions from '../actions/video';
 
+import videoFile from '../assets/video/big_buck_bunny.mp4';
+
 class App extends Component {
   componentDidMount() {
     this.props.disableVR();
@@ -30,7 +32,7 @@ class App extends Component {
             id="big-buck-bunny"
             autoPlay
             loop="true"
-            src="assets/video/big_buck_bunny.mp4"
+            src={videoFile}
           >
             <track kind="captions" />
           </video>

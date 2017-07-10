@@ -1,5 +1,6 @@
 import React from 'react';
 import { Entity } from 'aframe-react';
+import Cursor from './Cursor';
 
 const Camera = () =>
   (
@@ -8,7 +9,9 @@ const Camera = () =>
         userHeight: 1.6
       }}
       look-controls
-    />
+    >
+      <Cursor />
+    </Entity>
   );
 
 export default Camera;

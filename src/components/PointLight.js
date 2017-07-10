@@ -11,7 +11,7 @@ const PointLight = () =>
         castShadow: true
       }}
       position={{ x: 0, y: 10, z: 0 }}
-      rotation={{ x: -86.001, y: 0, z: 0 }}
+      rotation={{ x: -47.001, y: 0, z: 0 }}
     />
   );
 

@@ -18,6 +18,9 @@ const Sphere = () =>
         cast: true,
         receive: true
       }}
+      events={{
+        click: () => console.log('clicked')
+      }}
     />
   );
 
