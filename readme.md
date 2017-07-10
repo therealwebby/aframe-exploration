@@ -1,1 +1,6 @@
-Early look into the capabilities of aframe
+Aframe / React / Redux
+
+## Getting Started
+
+`yarn install`  
+`yarn run dev`  
