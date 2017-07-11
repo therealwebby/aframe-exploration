@@ -14,7 +14,7 @@ class Button extends Component {
         position={this.props.position}
         radius="0.5"
         material={{
-          color: '#1abc9c',
+          color: this.props.color,
           opacity: 1,
           transparent: true,
           metalness: 0.1,
@@ -38,7 +38,8 @@ Button.propTypes = {
     x: PropTypes.number,
     y: PropTypes.number,
     z: PropTypes.number
-  }).isRequired
+  }).isRequired,
+  color: PropTypes.string.isRequired
 };
 
 export default Button;

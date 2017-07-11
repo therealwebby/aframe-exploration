@@ -37,14 +37,15 @@ class App extends Component {
             <track kind="captions" />
           </video>
         </a-assets>
-
         <Button
           action={this.props.playVideo}
           position={{ x: -3, y: 1.25, z: -7.5 }}
+          color="#1abc9c"
         />
         <Button
           action={this.props.pauseVideo}
           position={{ x: 3, y: 1.25, z: -7.5 }}
+          color="#e67e22"
         />
         <Plane />
         <Sun />
