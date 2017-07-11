@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 import PropTypes from 'prop-types';
 
-import Sphere from './Sphere';
+import Button from './Button';
 import Sun from './Sun';
 import PointLight from './PointLight';
 import Plane from './Plane';
@@ -38,7 +38,14 @@ class App extends Component {
           </video>
         </a-assets>
 
-        <Sphere />
+        <Button
+          action={this.props.playVideo}
+          position={{ x: -3, y: 1.25, z: -7.5 }}
+        />
+        <Button
+          action={this.props.pauseVideo}
+          position={{ x: 3, y: 1.25, z: -7.5 }}
+        />
         <Plane />
         <Sun />
         <PointLight />
@@ -59,7 +66,8 @@ App.propTypes = {
   video: PropTypes.shape({
     isPlaying: PropTypes.bool.isRequired
   }).isRequired,
-  playVideo: PropTypes.func.isRequired
+  playVideo: PropTypes.func.isRequired,
+  pauseVideo: PropTypes.func.isRequired
 };
 
 /**
