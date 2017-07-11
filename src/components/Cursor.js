@@ -9,21 +9,24 @@ const Cursor = () =>
         fuse: true,
         fuseTimeout: 500
       }}
+      position={{ x: 0, y: 0, z: -0.9 }}
       geometry={{
         primitive: 'ring',
-        radiusInner: 0.02,
-        radiusOuter: 0.03
+        radiusInner: 0.01,
+        radiusOuter: 0.015
       }}
       material={{
-        color: 'black',
+        color: 'white',
         shader: 'flat'
       }}
       animation__click={{
         property: 'scale',
         startEvents: 'click',
-        from: '0.1 0.1 0.1',
-        to: '1 1 1',
-        dur: 150
+        to: '0.1 0.1 0.1',
+        from: '1 1 1',
+        dur: 500,
+        fill: 'backwards',
+        easing: 'easeInSine'
       }}
     />
   );

@@ -4,10 +4,6 @@ import { Entity } from 'aframe-react';
 import PropTypes from 'prop-types';
 
 class VideoPlayer extends Component {
-  componentDidMount() {
-    this.props.playVideo();
-  }
-
   componentDidUpdate() {
     if (this.props.isPlaying) {
       document.getElementById(this.props.videoId).play();
@@ -43,8 +39,7 @@ class VideoPlayer extends Component {
 
 VideoPlayer.propTypes = {
   isPlaying: PropTypes.bool.isRequired,
-  videoId: PropTypes.string.isRequired,
-  playVideo: PropTypes.func.isRequired
+  videoId: PropTypes.string.isRequired
 };
 
 export default VideoPlayer;
