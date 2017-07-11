@@ -1,7 +1,7 @@
 import React from 'react';
 import { Entity } from 'aframe-react';
 
-const Camera = () =>
+const Sky = () =>
   (
     <Entity
       primitive="a-sky"
@@ -9,4 +9,4 @@ const Camera = () =>
     />
   );
 
-export default Camera;
+export default Sky;
