@@ -4,7 +4,8 @@
     "no-underscore-dangle": 0,
     "comma-dangle": 0,
     "no-plusplus": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-boolean-value": 0
   },
   "env": {
     "browser": true

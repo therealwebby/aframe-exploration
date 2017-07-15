@@ -39,11 +39,15 @@ class App extends Component {
         </a-assets>
         <Button
           action={this.props.playVideo}
+          isPlayButton={true}
+          isPlaying={this.props.video.isPlaying}
           position={{ x: -3, y: 1.25, z: -7.5 }}
           color="#1abc9c"
         />
         <Button
           action={this.props.pauseVideo}
+          isPlayButton={false}
+          isPlaying={this.props.video.isPlaying}
           position={{ x: 3, y: 1.25, z: -7.5 }}
           color="#e67e22"
         />
