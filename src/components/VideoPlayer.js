@@ -1,4 +1,3 @@
-import 'aframe-animation-component';
 import React, { Component } from 'react';
 import { Entity } from 'aframe-react';
 import PropTypes from 'prop-types';
@@ -24,7 +23,18 @@ class VideoPlayer extends Component {
           cast: false,
           receive: true
         }}
-      />
+      >
+        <a-animation
+          attribute="position"
+          begin="play"
+          dur="1500"
+          loop="false"
+          from="0 -5 -20"
+          to="0 7 -20"
+          easing="ease-out-elastic"
+          elasticity="500"
+        />
+      </Entity>
     );
   }
 }
